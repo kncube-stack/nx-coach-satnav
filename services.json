@@ -1,0 +1,24 @@
+[
+  {
+    "serviceId": "A6",
+    "label": "A6 - London Paddington to Stansted Airport",
+    "stopIds": [2, 3, 4, 5, 6, 7, 8]
+  },
+  {
+    "serviceId": "400",
+    "label": "400 - London Victoria to Birmingham Coach Station",
+    "stopIds": [1, 7, 11]
+  },
+  {
+    "serviceId": "450",
+    "label": "450 - London Victoria to Nottingham Broad Marsh",
+    "stopIds": [1, 7, 12, 13]
+  },
+  {
+    "serviceId": "025",
+    "label": "025 (25) - London Victoria to Brighton",
+    "aliases": ["25"],
+    "stopIds": [1, 18, 19, 22, 21, 24, 25, 26, 27, 28, 23],
+    "unmatchedStops": ["Hickstead"]
+  }
+]

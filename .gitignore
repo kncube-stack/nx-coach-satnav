@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+*.log
+*.tmp
+*.swp
+*.swo
+nx-satnav-deploy.zip
+deploy-package/

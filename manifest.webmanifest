@@ -1,0 +1,19 @@
+{
+  "name": "NX Coach Satnav Prototype",
+  "short_name": "NX Satnav",
+  "description": "National Express coach navigation prototype with duty routing and live guidance.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#02050c",
+  "theme_color": "#081424",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='34' fill='%23081424'/%3E%3Cpath d='M33 108c0-30 24-54 54-54h18c30 0 54 24 54 54v24H33v-24z' fill='%231d8fff'/%3E%3Crect x='53' y='68' width='86' height='28' rx='10' fill='%23d8efff'/%3E%3Ccircle cx='62' cy='138' r='10' fill='%23081a2d'/%3E%3Ccircle cx='130' cy='138' r='10' fill='%23081a2d'/%3E%3Cpath d='M96 26l16 20H80l16-20z' fill='%23f4fbff'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

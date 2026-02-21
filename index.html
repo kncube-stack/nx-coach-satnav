@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#081424" />
+    <title>NX Coach Route Prototype</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <div id="map" aria-label="Map"></div>
+
+      <section class="top-road-bar" aria-label="Quick settings">
+        <button id="top-settings-btn" type="button" class="top-icon-btn" aria-label="Open settings">⚙</button>
+      </section>
+
+      <section class="floating-top">
+        <h1 class="app-title">NX Coach Nav</h1>
+        <label class="visually-hidden" for="target-input">Destination or duty</label>
+        <div class="search-row">
+          <button id="search-drag-handle" type="button" class="search-drag-handle" aria-label="Move search bar">⋮⋮</button>
+          <input
+            id="target-input"
+            type="text"
+            list="target-options"
+            class="search-input"
+            placeholder="Search duty, postcode, or destination"
+          />
+        </div>
+        <datalist id="target-options"></datalist>
+
+        <div class="primary-actions">
+          <button id="plan-route" type="button" class="primary start-btn" disabled>Start</button>
+          <button id="toggle-stops" type="button" class="ghost-btn">Stops</button>
+          <button id="toggle-settings" type="button" class="ghost-btn">Settings</button>
+          <button
+            id="voice-guidance-toggle"
+            type="button"
+            class="voice-toggle"
+            aria-label="Toggle voice guidance"
+            aria-pressed="false"
+            title="Voice guidance off"
+          >
+            🔇
+          </button>
+        </div>
+
+        <p id="status" class="status overlay-status" aria-live="polite"></p>
+      </section>
+
+      <section class="floating-nav">
+        <p id="nav-status" class="nav-status">Next guidance will appear here after route + GPS start.</p>
+        <p id="lane-status" class="lane-status">Lane guidance will appear before major turns.</p>
+        <p id="gps-status" class="gps-status">GPS not started.</p>
+      </section>
+
+      <section class="nav-fab-row" aria-label="Navigation quick actions">
+        <button id="nav-recenter-fab" type="button" class="nav-recenter-fab" aria-label="Recenter map">◎</button>
+        <button id="nav-search-fab" type="button" class="nav-search-fab" aria-label="Open destination search">🔍</button>
+        <button id="stop-guidance" type="button" class="nav-stop-fab danger-btn" aria-label="Stop navigation" disabled>✕</button>
+      </section>
+
+      <section id="stops-sheet" class="stops-sheet" aria-hidden="true">
+        <div class="sheet-header">
+          <h2>Stops</h2>
+          <button id="close-stops" type="button" class="ghost-btn">Close</button>
+        </div>
+
+        <label for="nx-stop">National Express stops</label>
+        <div class="inline-controls">
+          <select id="nx-stop"></select>
+          <button id="add-via" type="button">Add</button>
+        </div>
+        <ol id="via-list" class="via-list"></ol>
+
+        <details class="sheet-block" open>
+          <summary>Route Summary</summary>
+          <p id="summary" class="summary">No route planned yet.</p>
+          <ol id="directions" class="directions"></ol>
+        </details>
+
+        <details class="sheet-block">
+          <summary>Duty Timeline</summary>
+          <ol id="duty-timeline" class="directions"></ol>
+        </details>
+
+        <details class="sheet-block">
+          <summary>Routing Setup</summary>
+          <label for="ors-key">OpenRouteService API key</label>
+          <input id="ors-key" type="password" placeholder="Paste ORS key" autocomplete="off" />
+          <div class="grid">
+            <label>
+              Height (m)
+              <input id="vehicle-height" type="number" step="0.1" min="0" value="4.2" />
+            </label>
+            <label>
+              Width (m)
+              <input id="vehicle-width" type="number" step="0.1" min="0" value="2.55" />
+            </label>
+            <label>
+              Length (m)
+              <input id="vehicle-length" type="number" step="0.1" min="0" value="12" />
+            </label>
+            <label>
+              Weight (t)
+              <input id="vehicle-weight" type="number" step="0.5" min="0" value="18" />
+            </label>
+            <label>
+              Map vehicle icon
+              <select id="vehicle-icon">
+                <option value="coach" selected>Coach</option>
+                <option value="truck">Truck</option>
+                <option value="car">Car</option>
+              </select>
+            </label>
+          </div>
+        </details>
+      </section>
+
+      <section id="settings-sheet" class="settings-sheet" aria-hidden="true">
+        <div class="sheet-header">
+          <h2>Settings</h2>
+          <button id="close-settings" type="button" class="ghost-btn">Close</button>
+        </div>
+
+        <label for="setting-units">Distance units</label>
+        <select id="setting-units">
+          <option value="imperial">Miles / Yards</option>
+          <option value="metric">Km / Meters</option>
+        </select>
+
+        <label for="setting-route-color">Route line color</label>
+        <input id="setting-route-color" type="color" value="#1d8fff" />
+
+        <label class="checkline settings-checkline" for="setting-voice-enabled">
+          <input id="setting-voice-enabled" type="checkbox" checked />
+          Voice guidance enabled
+        </label>
+
+        <label for="setting-voice-name">Voice</label>
+        <select id="setting-voice-name"></select>
+
+        <label for="setting-voice-rate">Voice speed</label>
+        <input id="setting-voice-rate" type="range" min="0.7" max="1.4" step="0.05" value="1" />
+
+        <label for="setting-vehicle-icon-search">Vehicle icon</label>
+        <input
+          id="setting-vehicle-icon-search"
+          type="text"
+          list="vehicle-icon-options"
+          placeholder="Search vehicle type (coach, truck, car)"
+        />
+        <datalist id="vehicle-icon-options">
+          <option value="coach"></option>
+          <option value="bus"></option>
+          <option value="truck"></option>
+          <option value="lorry"></option>
+          <option value="car"></option>
+          <option value="taxi"></option>
+          <option value="van"></option>
+        </datalist>
+
+        <label class="checkline settings-checkline" for="setting-auto-reroute">
+          <input id="setting-auto-reroute" type="checkbox" checked />
+          Auto-reroute when off route
+        </label>
+
+        <label class="checkline settings-checkline" for="setting-camera-follow">
+          <input id="setting-camera-follow" type="checkbox" checked />
+          Camera follow (auto-center while driving)
+        </label>
+
+        <label for="setting-coach-profile">Coach safety profile</label>
+        <select id="setting-coach-profile">
+          <option value="safe">Safe (recommended)</option>
+          <option value="balanced">Balanced</option>
+          <option value="fast">Fastest</option>
+        </select>
+
+        <label for="setting-routing-provider">Routing backend</label>
+        <select id="setting-routing-provider">
+          <option value="auto">Auto (ORS HGV -> ORS Car -> OSRM)</option>
+          <option value="ors-hgv">ORS HGV only</option>
+          <option value="ors-car">ORS car only</option>
+          <option value="osrm">OSRM only</option>
+        </select>
+
+        <details class="settings-block">
+          <summary>Free Self-Host Endpoints</summary>
+          <label for="setting-ors-base-url">ORS base URL</label>
+          <input id="setting-ors-base-url" type="url" placeholder="https://api.openrouteservice.org" />
+
+          <label for="setting-osrm-base-url">OSRM base URL</label>
+          <input id="setting-osrm-base-url" type="url" placeholder="https://router.project-osrm.org" />
+
+          <label for="setting-geocoder-base-url">Nominatim base URL</label>
+          <input id="setting-geocoder-base-url" type="url" placeholder="https://nominatim.openstreetmap.org" />
+
+          <label for="setting-postcode-base-url">Postcodes API base URL</label>
+          <input id="setting-postcode-base-url" type="url" placeholder="https://api.postcodes.io" />
+
+          <label class="checkline settings-checkline" for="setting-use-public-fallback">
+            <input id="setting-use-public-fallback" type="checkbox" checked />
+            Allow public fallback endpoints
+          </label>
+        </details>
+
+        <details class="settings-block">
+          <summary>Telemetry & Replay</summary>
+          <label class="checkline settings-checkline" for="setting-telemetry-enabled">
+            <input id="setting-telemetry-enabled" type="checkbox" checked />
+            Capture drive telemetry
+          </label>
+          <div class="settings-actions">
+            <button id="telemetry-export" type="button" class="ghost-btn">Export telemetry</button>
+            <button id="telemetry-clear" type="button" class="ghost-btn">Clear telemetry</button>
+            <button id="telemetry-replay-start" type="button" class="ghost-btn">Replay last drive</button>
+            <button id="telemetry-replay-stop" type="button" class="ghost-btn">Stop replay</button>
+          </div>
+        </details>
+
+        <details class="settings-block">
+          <summary>3D Preview</summary>
+          <p class="settings-help">Open an experimental MapLibre 3D preview (free, no paid tiles required).</p>
+          <button id="open-3d-preview" type="button" class="ghost-btn">Open 3D preview</button>
+        </details>
+
+        <div class="settings-block">
+          <p class="settings-label">Avoid roads</p>
+          <label class="checkline settings-checkline" for="setting-avoid-motorways">
+            <input id="setting-avoid-motorways" type="checkbox" />
+            Avoid motorways
+          </label>
+          <label class="checkline settings-checkline" for="setting-avoid-tolls">
+            <input id="setting-avoid-tolls" type="checkbox" />
+            Avoid toll roads
+          </label>
+          <label class="checkline settings-checkline" for="setting-avoid-ferries">
+            <input id="setting-avoid-ferries" type="checkbox" />
+            Avoid ferries
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-rotate@0.2.8/dist/leaflet-rotate-src.js"></script>
+    <script type="module" src="app.js?v=20260217i"></script>
+  </body>
+</html>

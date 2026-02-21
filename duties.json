@@ -1,0 +1,2583 @@
+[
+  {
+    "dutyId": "201",
+    "label": "Duty 201 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "01:40",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "02:53",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "02:58",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "03:03",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "03:19",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "04:30",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "05:55",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "07:25",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "07:36",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "07:41",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "07:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "07:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "202",
+    "label": "Duty 202 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "02:30",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "03:43",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "03:48",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "03:53",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "04:09",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "05:20",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "06:45",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "08:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "08:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "08:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "08:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "08:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "203",
+    "label": "Duty 203 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "03:20",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "04:33",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "04:38",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "04:43",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "04:59",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "06:10",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "07:45",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "09:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "09:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "09:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "09:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "09:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "204",
+    "label": "Duty 204 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "04:20",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "05:33",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "05:38",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "05:43",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "05:59",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "07:10",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "08:50",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "10:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "10:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "10:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "10:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "10:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "205",
+    "label": "Duty 205 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "05:20",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "06:33",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "06:38",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "06:45",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "07:03",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "08:20",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "10:00",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "11:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "11:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "11:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "11:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "11:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "206",
+    "label": "Duty 206 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "12:55",
+        "description": "Paddington Station Stop J Dep",
+        "stopId": 2
+      },
+      {
+        "time": "13:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "13:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "13:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "13:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "14:50",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "16:00",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "17:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "17:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "17:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "17:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "17:51",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 1 from Duty 201"
+    ]
+  },
+  {
+    "dutyId": "207",
+    "label": "Duty 207 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "13:55",
+        "description": "Paddington Station Stop J Dep",
+        "stopId": 2
+      },
+      {
+        "time": "14:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "14:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "14:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "14:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "16:00",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "17:05",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "18:25",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "18:36",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "18:45",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "18:50",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "18:56",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 2 from Duty 202"
+    ]
+  },
+  {
+    "dutyId": "208",
+    "label": "Duty 208 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "01:05",
+        "description": "Paddington Station Stop J",
+        "stopId": 2
+      },
+      {
+        "time": "01:55",
+        "description": "Sign Off"
+      },
+      {
+        "time": "14:05",
+        "description": "Sign On"
+      },
+      {
+        "time": "15:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "15:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "15:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "15:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "17:05",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "18:10",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "19:25",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "19:37",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "19:45",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "19:50",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "19:56",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 3 from Duty 203"
+    ]
+  },
+  {
+    "dutyId": "209",
+    "label": "Duty 209 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "02:25",
+        "description": "Paddington Station Stop J",
+        "stopId": 2
+      },
+      {
+        "time": "03:15",
+        "description": "Sign Off"
+      },
+      {
+        "time": "15:05",
+        "description": "Sign On"
+      },
+      {
+        "time": "16:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "16:11",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "16:19",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "16:40",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "18:10",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "19:15",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "20:30",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "20:40",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "20:46",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "20:51",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "20:56",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 4 from Duty 204"
+    ]
+  },
+  {
+    "dutyId": "210",
+    "label": "Duty 210 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "02:45",
+        "description": "Paddington Station Stop J",
+        "stopId": 2
+      },
+      {
+        "time": "03:35",
+        "description": "Sign Off"
+      },
+      {
+        "time": "16:05",
+        "description": "Sign On"
+      },
+      {
+        "time": "17:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "17:11",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "17:19",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "17:40",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "19:10",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "20:15",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "21:30",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "21:40",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "21:46",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "21:50",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "21:55",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 5 from Duty 205"
+    ]
+  },
+  {
+    "dutyId": "261",
+    "label": "Duty 261 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "01:40",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "02:53",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "02:58",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "03:03",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "03:19",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "04:30",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "06:05",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "07:25",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "07:36",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "07:41",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "07:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "07:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "262",
+    "label": "Duty 262 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "02:30",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "03:43",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "03:48",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "03:53",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "04:09",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "05:20",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "07:00",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "08:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "08:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "08:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "08:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "08:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "263",
+    "label": "Duty 263 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "03:20",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "04:33",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "04:38",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "04:43",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "04:59",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "06:10",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "08:00",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "09:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "09:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "09:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "09:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "09:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "264",
+    "label": "Duty 264 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "04:20",
+        "description": "Empty to Paddington Station",
+        "stopId": 2
+      },
+      {
+        "time": "05:33",
+        "description": "Baker Street Marylebone Rd Stop V",
+        "stopId": 3
+      },
+      {
+        "time": "05:38",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "05:43",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "05:59",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "07:10",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "09:00",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "10:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "10:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "10:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "10:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "10:51",
+        "description": "Paddington Station Stop 15 Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length"
+    ]
+  },
+  {
+    "dutyId": "266",
+    "label": "Duty 266 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "12:55",
+        "description": "Paddington Station Stop J Dep",
+        "stopId": 2
+      },
+      {
+        "time": "13:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "13:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "13:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "13:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "14:50",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "16:00",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "17:20",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "17:31",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "17:40",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "17:45",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "17:51",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 1 from Duty 261"
+    ]
+  },
+  {
+    "dutyId": "267",
+    "label": "Duty 267 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "13:55",
+        "description": "Paddington Station Stop J Dep",
+        "stopId": 2
+      },
+      {
+        "time": "14:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "14:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "14:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "14:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "15:50",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "17:05",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "18:25",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "18:36",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "18:45",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "18:50",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "18:56",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 2 from Duty 262"
+    ]
+  },
+  {
+    "dutyId": "268",
+    "label": "Duty 268 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "01:05",
+        "description": "Paddington Station Stop J",
+        "stopId": 2
+      },
+      {
+        "time": "01:55",
+        "description": "Sign Off"
+      },
+      {
+        "time": "14:05",
+        "description": "Sign On"
+      },
+      {
+        "time": "15:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "15:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "15:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "15:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "16:50",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "18:10",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "19:25",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "19:37",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "19:45",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "19:50",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "19:56",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 3 from Duty 263"
+    ]
+  },
+  {
+    "dutyId": "269",
+    "label": "Duty 269 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "02:25",
+        "description": "Paddington Station Stop J",
+        "stopId": 2
+      },
+      {
+        "time": "15:05",
+        "description": "Sign On"
+      },
+      {
+        "time": "16:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "16:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "16:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "16:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "17:50",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "19:15",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "20:30",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "20:40",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "20:45",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "20:51",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "20:56",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Timed event",
+      "Duty Length",
+      "Take over Coach 4 from Duty 264"
+    ]
+  },
+  {
+    "dutyId": "270",
+    "label": "Duty 270 (Route A6)",
+    "routeCodes": [
+      "A6"
+    ],
+    "stopIds": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      7,
+      5,
+      4,
+      3,
+      2
+    ],
+    "timeline": [
+      {
+        "time": "02:45",
+        "description": "Paddington Station Stop J",
+        "stopId": 2
+      },
+      {
+        "time": "03:35",
+        "description": "Sign Off"
+      },
+      {
+        "time": "16:05",
+        "description": "Sign On"
+      },
+      {
+        "time": "17:05",
+        "description": "Baker Street Gloucester Place Stop 19",
+        "stopId": 3
+      },
+      {
+        "time": "17:10",
+        "description": "St John's Wood Lord's Stop Z",
+        "stopId": 4
+      },
+      {
+        "time": "17:17",
+        "description": "Finchley Road Tube Station Stop CL",
+        "stopId": 5
+      },
+      {
+        "time": "17:35",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "18:50",
+        "description": "Stansted Airport Coach Station Arr",
+        "stopId": 8
+      },
+      {
+        "time": "20:15",
+        "description": "Pull on stand"
+      },
+      {
+        "time": "21:30",
+        "description": "Golders Green Finchley Road Stop GV",
+        "stopId": 7
+      },
+      {
+        "time": "21:40",
+        "description": "Finchley Road Train Station Stop FF",
+        "stopId": 5
+      },
+      {
+        "time": "21:46",
+        "description": "St John's Wood Lord's Stop K",
+        "stopId": 4
+      },
+      {
+        "time": "21:50",
+        "description": "Baker Street Stop A",
+        "stopId": 3
+      },
+      {
+        "time": "21:55",
+        "description": "Paddington Station Stop J Arr",
+        "stopId": 2
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 5 from Duty 205"
+    ]
+  },
+  {
+    "dutyId": "301",
+    "label": "Duty 301 (Route 025)",
+    "routeCodes": [
+      "025"
+    ],
+    "stopIds": [
+      1,
+      22,
+      21,
+      23
+    ],
+    "timeline": [
+      {
+        "time": "03:50",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "07:00",
+        "description": "Gatwick North Terminal     Arr",
+        "stopId": 22
+      },
+      {
+        "time": "07:10",
+        "description": "Gatwick South Terminal Arr",
+        "stopId": 21
+      },
+      {
+        "time": "08:05",
+        "description": "Brighton Pool Valley",
+        "stopId": 23
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Heathrow Central Bus Station   Arr",
+      "Heathrow Central Bus Station   Dep",
+      "Heathrow Terminal 5 Arr",
+      "Heathrow Terminal 5 Dep",
+      "Hickstead Bus Stop",
+      "Patcham Black Lion",
+      "Withdean Park The Deneway",
+      "Preston Park Hotel",
+      "Preston Circus London Road",
+      "York Place St Peters Church",
+      "Preston Circus Carters",
+      "Preston Park Sainsburys",
+      "Duty Length",
+      "Hand over Coach 6 to Duty 306"
+    ]
+  },
+  {
+    "dutyId": "302",
+    "label": "Duty 302 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      16,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "04:50",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:15",
+        "description": "Coventry Pool Meadow Bus Station Arr",
+        "stopId": 16
+      },
+      {
+        "time": "09:10",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 7 to Duty 307"
+    ]
+  },
+  {
+    "dutyId": "303",
+    "label": "Duty 303 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      7,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "05:20",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "07:05",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "09:45",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Nottingham Trent University",
+      "Duty Length",
+      "Hand over Coach 9 to Duty 308"
+    ]
+  },
+  {
+    "dutyId": "304",
+    "label": "Duty 304 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      7,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "06:05",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:15",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "10:40",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 8 to Duty 309"
+    ]
+  },
+  {
+    "dutyId": "305",
+    "label": "Duty 305 (Route 440)",
+    "routeCodes": [
+      "440"
+    ],
+    "stopIds": [
+      1,
+      14,
+      17
+    ],
+    "timeline": [
+      {
+        "time": "06:05",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "09:00",
+        "description": "Milton Keynes Coachway Arr",
+        "stopId": 14
+      },
+      {
+        "time": "10:10",
+        "description": "Leicester Braunstone",
+        "stopId": 17
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 10 to Duty 310"
+    ]
+  },
+  {
+    "dutyId": "306",
+    "label": "Duty 306 (Route 025)",
+    "routeCodes": [
+      "025"
+    ],
+    "stopIds": [
+      1,
+      22,
+      21,
+      23
+    ],
+    "timeline": [
+      {
+        "time": "14:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "16:15",
+        "description": "Gatwick North Terminal     Arr",
+        "stopId": 22
+      },
+      {
+        "time": "16:25",
+        "description": "Gatwick South Terminal Arr",
+        "stopId": 21
+      },
+      {
+        "time": "17:25",
+        "description": "Brighton Pool Valley",
+        "stopId": 23
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 6 from Duty 301",
+      "Heathrow Central Bus Station   Arr",
+      "Heathrow Central Bus Station   Dep",
+      "Heathrow Terminal 5 Arr",
+      "Heathrow Terminal 5 Dep",
+      "Hickstead Bus Stop",
+      "Patcham Black Lion",
+      "Withdean Park The Deneway",
+      "Preston Park Hotel",
+      "Preston Circus London Road",
+      "York Place St Peters Church",
+      "Preston Circus Carters",
+      "Preston Park Sainsburys"
+    ]
+  },
+  {
+    "dutyId": "307",
+    "label": "Duty 307 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      9,
+      10,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "15:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "15:40",
+        "description": "North Acton Friary Road",
+        "stopId": 9
+      },
+      {
+        "time": "15:48",
+        "description": "Greenford Greenford Roundabout",
+        "stopId": 10
+      },
+      {
+        "time": "18:25",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 7 from Duty 302"
+    ]
+  },
+  {
+    "dutyId": "308",
+    "label": "Duty 308 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      12,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "15:30",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "19:05",
+        "description": "Nottingham University University Boulevard",
+        "stopId": 12
+      },
+      {
+        "time": "19:15",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 9 from Duty 303"
+    ]
+  },
+  {
+    "dutyId": "309",
+    "label": "Duty 309 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      7,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "16:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "16:55",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "19:45",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 8 from Duty 304"
+    ]
+  },
+  {
+    "dutyId": "310",
+    "label": "Duty 310 (Route 440)",
+    "routeCodes": [
+      "440"
+    ],
+    "stopIds": [
+      1,
+      14,
+      17
+    ],
+    "timeline": [
+      {
+        "time": "00:05",
+        "description": "Victoria Coach Station arrivals",
+        "stopId": 1
+      },
+      {
+        "time": "01:15",
+        "description": "Sign Off"
+      },
+      {
+        "time": "14:35",
+        "description": "Sign On"
+      },
+      {
+        "time": "19:00",
+        "description": "Milton Keynes Coachway Arr",
+        "stopId": 14
+      },
+      {
+        "time": "20:25",
+        "description": "Leicester St Margaret's Bus Station Arr",
+        "stopId": 17
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 10 from Duty 305"
+    ]
+  },
+  {
+    "dutyId": "323",
+    "label": "Duty 323 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      14,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "05:50",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:20",
+        "description": "Milton Keynes Coachway",
+        "stopId": 14
+      },
+      {
+        "time": "10:15",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Nottingham Trent University",
+      "Hand over Coach 9 to Duty 328"
+    ]
+  },
+  {
+    "dutyId": "324",
+    "label": "Duty 324 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      7,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "06:05",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:15",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "10:35",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 8 to Duty 329"
+    ]
+  },
+  {
+    "dutyId": "327",
+    "label": "Duty 327 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      7,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "15:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "15:45",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "18:25",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 7 from Duty 302"
+    ]
+  },
+  {
+    "dutyId": "328",
+    "label": "Duty 328 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      12,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "15:30",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "19:05",
+        "description": "Nottingham University University Boulevard",
+        "stopId": 12
+      },
+      {
+        "time": "19:15",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 9 from Duty 323"
+    ]
+  },
+  {
+    "dutyId": "329",
+    "label": "Duty 329 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      9,
+      10,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "16:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "16:40",
+        "description": "North Acton Friary Road",
+        "stopId": 9
+      },
+      {
+        "time": "16:48",
+        "description": "Greenford Greenford Roundabout",
+        "stopId": 10
+      },
+      {
+        "time": "19:30",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 8 from Duty 324"
+    ]
+  },
+  {
+    "dutyId": "348",
+    "label": "Duty 348 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "15:30",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "19:15",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 9 from Duty 343"
+    ]
+  },
+  {
+    "dutyId": "362",
+    "label": "Duty 362 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      16,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "04:50",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:10",
+        "description": "Coventry Pool Meadow Bus Station Arr",
+        "stopId": 16
+      },
+      {
+        "time": "08:55",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 7 to Duty 307"
+    ]
+  },
+  {
+    "dutyId": "363",
+    "label": "Duty 363 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      7,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "05:20",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "07:05",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "09:35",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Nottingham Trent University",
+      "Duty Length",
+      "Hand over Coach 9 to Duty 368"
+    ]
+  },
+  {
+    "dutyId": "364",
+    "label": "Duty 364 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      7,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "06:20",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:10",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "10:30",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 8 to Duty 369"
+    ]
+  },
+  {
+    "dutyId": "365",
+    "label": "Duty 365 (Route 440)",
+    "routeCodes": [
+      "440"
+    ],
+    "stopIds": [
+      1,
+      14,
+      17
+    ],
+    "timeline": [
+      {
+        "time": "06:20",
+        "description": "Empty to Victoria Coach Station",
+        "stopId": 1
+      },
+      {
+        "time": "08:50",
+        "description": "Milton Keynes Coachway Arr",
+        "stopId": 14
+      },
+      {
+        "time": "09:55",
+        "description": "Leicester Braunstone",
+        "stopId": 17
+      }
+    ],
+    "unmatchedEvents": [
+      "Arrive for loading by",
+      "Duty Length",
+      "Hand over Coach 10 to Duty 370"
+    ]
+  },
+  {
+    "dutyId": "366",
+    "label": "Duty 366 (Route 025)",
+    "routeCodes": [
+      "025"
+    ],
+    "stopIds": [
+      1,
+      22,
+      21,
+      23
+    ],
+    "timeline": [
+      {
+        "time": "14:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "16:05",
+        "description": "Gatwick North Terminal     Arr",
+        "stopId": 22
+      },
+      {
+        "time": "16:15",
+        "description": "Gatwick South Terminal Arr",
+        "stopId": 21
+      },
+      {
+        "time": "17:15",
+        "description": "Brighton Pool Valley",
+        "stopId": 23
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 6 from Duty 301",
+      "Heathrow Central Bus Station   Arr",
+      "Heathrow Central Bus Station   Dep",
+      "Heathrow Terminal 5 Arr",
+      "Heathrow Terminal 5 Dep",
+      "Hickstead Bus Stop",
+      "Patcham Black Lion",
+      "Withdean Park The Deneway",
+      "Preston Park Hotel",
+      "Preston Circus London Road",
+      "York Place St Peters Church",
+      "Preston Circus Carters",
+      "Preston Park Sainsburys"
+    ]
+  },
+  {
+    "dutyId": "367",
+    "label": "Duty 367 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      9,
+      10,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "15:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "15:35",
+        "description": "North Acton Friary Road",
+        "stopId": 9
+      },
+      {
+        "time": "15:43",
+        "description": "Greenford Greenford Roundabout",
+        "stopId": 10
+      },
+      {
+        "time": "18:10",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 7 from Duty 362"
+    ]
+  },
+  {
+    "dutyId": "368",
+    "label": "Duty 368 (Route 450)",
+    "routeCodes": [
+      "450"
+    ],
+    "stopIds": [
+      1,
+      12,
+      13
+    ],
+    "timeline": [
+      {
+        "time": "15:30",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "18:45",
+        "description": "Nottingham University University Boulevard",
+        "stopId": 12
+      },
+      {
+        "time": "18:55",
+        "description": "Nottingham Broad Marsh Bus Station Arr",
+        "stopId": 13
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 9 from Duty 363"
+    ]
+  },
+  {
+    "dutyId": "369",
+    "label": "Duty 369 (Route 400)",
+    "routeCodes": [
+      "400"
+    ],
+    "stopIds": [
+      1,
+      7,
+      11
+    ],
+    "timeline": [
+      {
+        "time": "16:00",
+        "description": "Victoria Coach Station departures",
+        "stopId": 1
+      },
+      {
+        "time": "16:50",
+        "description": "Golders Green Bus Station, Stop GE",
+        "stopId": 7
+      },
+      {
+        "time": "19:25",
+        "description": "Birmingham Digbeth Arr",
+        "stopId": 11
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 8 from Duty 364"
+    ]
+  },
+  {
+    "dutyId": "370",
+    "label": "Duty 370 (Route 440)",
+    "routeCodes": [
+      "440"
+    ],
+    "stopIds": [
+      1,
+      14,
+      17
+    ],
+    "timeline": [
+      {
+        "time": "00:05",
+        "description": "Victoria Coach Station arrivals",
+        "stopId": 1
+      },
+      {
+        "time": "01:15",
+        "description": "Sign Off"
+      },
+      {
+        "time": "14:35",
+        "description": "Sign On"
+      },
+      {
+        "time": "18:40",
+        "description": "Milton Keynes Coachway Arr",
+        "stopId": 14
+      },
+      {
+        "time": "20:05",
+        "description": "Leicester St Margaret's Bus Station Arr",
+        "stopId": 17
+      }
+    ],
+    "unmatchedEvents": [
+      "Duty Length",
+      "Take over Coach 10 from Duty 365"
+    ]
+  }
+]

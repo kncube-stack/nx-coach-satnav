@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "London Victoria",
+    "postcode": "SW1W 9RH"
+  },
+  {
+    "id": 2,
+    "name": "London paddington",
+    "postcode": "W2 6LG"
+  },
+  {
+    "id": 3,
+    "name": "Baker Street",
+    "postcode": "NW1 5AN"
+  },
+  {
+    "id": 4,
+    "name": "St John's Wood",
+    "postcode": "NW8 9JA"
+  },
+  {
+    "id": 5,
+    "name": "Finchley Rd Station",
+    "postcode": "NW3 6LS"
+  },
+  {
+    "id": 6,
+    "name": "Finchley Rd & Frognal",
+    "postcode": "NW3 6EP"
+  },
+  {
+    "id": 7,
+    "name": "Golder's Green",
+    "postcode": "NW11 7RN"
+  },
+  {
+    "id": 8,
+    "name": "Stansted Airport",
+    "postcode": "CM24 1QN"
+  },
+  {
+    "id": 9,
+    "name": "London North Acton",
+    "postcode": "W3 6QL"
+  },
+  {
+    "id": 10,
+    "name": "London Greenford",
+    "postcode": "UB6 8ET"
+  },
+  {
+    "id": 11,
+    "name": "Birmingham Coach Station",
+    "postcode": "B5 6DD"
+  },
+  {
+    "id": 12,
+    "name": "Nottingham University Boulervard",
+    "postcode": "NG7 2TW"
+  },
+  {
+    "id": 13,
+    "name": "Nottingham Broad Marsh Bus station",
+    "postcode": "NG1 7FF"
+  },
+  {
+    "id": 14,
+    "name": "Milton Keynes Coachway",
+    "postcode": "MK16 0AA"
+  },
+  {
+    "id": 15,
+    "name": "London Marble Arch",
+    "postcode": "W1K 7AE"
+  },
+  {
+    "id": 16,
+    "name": "Coventry Pool Meadow Bus station",
+    "postcode": "CV1 5AD"
+  },
+  {
+    "id": 17,
+    "name": "Leicester St Margaret's Bus Station",
+    "postcode": "LE1 3AQ"
+  },
+  {
+    "id": 18,
+    "name": "Heathrow Airport T2 & T3",
+    "postcode": "TW6 1SD"
+  },
+  {
+    "id": 19,
+    "name": "Heathrow Airport T5",
+    "postcode": "TW6 2GB"
+  },
+  {
+    "id": 20,
+    "name": "Heathrow Airport T4",
+    "postcode": "TW6 3XA"
+  },
+  {
+    "id": 21,
+    "name": "Gatwick Airport South Terminal",
+    "postcode": "RH6 0NN"
+  },
+  {
+    "id": 22,
+    "name": "Gatwick Airport North Terminal",
+    "postcode": "RH6 0PH"
+  },
+  {
+    "id": 23,
+    "name": "Brighton",
+    "postcode": "BN1 1EL"
+  },
+  {
+    "id": 24,
+    "name": "Brighton (Patcham)",
+    "postcode": "BN1 8YE"
+  },
+  {
+    "id": 25,
+    "name": "Brighton (Withdean park)",
+    "postcode": "BN1 8NA"
+  },
+  {
+    "id": 26,
+    "name": "Brighton (Preston Park)",
+    "postcode": "BN1 6UU"
+  },
+  {
+    "id": 27,
+    "name": "Brighton (Preston Circus)",
+    "postcode": "BN1 4QE"
+  },
+  {
+    "id": 28,
+    "name": "Brighton (York Place)",
+    "postcode": "BN1 4GU"
+  }
+]

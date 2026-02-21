@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NX 3D Route Preview</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.1.1/dist/maplibre-gl.css" />
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        margin: 0;
+        font-family: "Barlow", system-ui, sans-serif;
+        background: #040913;
+        color: #e6f0ff;
+      }
+      #map {
+        position: fixed;
+        inset: 0;
+      }
+      .hud {
+        position: fixed;
+        top: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(6, 18, 38, 0.85);
+        border: 1px solid rgba(152, 192, 255, 0.34);
+        border-radius: 12px;
+        padding: 0.55rem 0.8rem;
+        backdrop-filter: blur(8px);
+        z-index: 3;
+        font-weight: 600;
+      }
+      .hud small {
+        display: block;
+        font-weight: 500;
+        color: #9fc3f1;
+        margin-top: 0.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" aria-label="3D map preview"></div>
+    <div class="hud">
+      Experimental 3D preview
+      <small>Pitch is fixed for chase-cam simulation. Use this to validate route shape and heading.</small>
+    </div>
+
+    <script src="https://unpkg.com/maplibre-gl@5.1.1/dist/maplibre-gl.js"></script>
+    <script>
+      const STORAGE_LAST_ROUTE_KEY = "nx_last_route_geojson";
+
+      const style = {
+        version: 8,
+        sources: {
+          osm: {
+            type: "raster",
+            tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+            tileSize: 256,
+            attribution: "© OpenStreetMap contributors",
+          },
+        },
+        layers: [
+          {
+            id: "osm",
+            type: "raster",
+            source: "osm",
+          },
+        ],
+      };
+
+      const payloadRaw = localStorage.getItem(STORAGE_LAST_ROUTE_KEY);
+      let payload = null;
+      try {
+        payload = payloadRaw ? JSON.parse(payloadRaw) : null;
+      } catch {
+        payload = null;
+      }
+
+      const map = new maplibregl.Map({
+        container: "map",
+        style,
+        center: [-0.1278, 51.5074],
+        zoom: 13,
+        pitch: 58,
+        bearing: Number.isFinite(Number(payload?.heading)) ? Number(payload.heading) : 0,
+        antialias: true,
+      });
+
+      map.addControl(new maplibregl.NavigationControl({ visualizePitch: true, showCompass: true }), "bottom-right");
+
+      map.on("load", () => {
+        const route = Array.isArray(payload?.route) ? payload.route : [];
+        if (route.length < 2) {
+          return;
+        }
+
+        const lineCoords = route
+          .map((pair) => {
+            const lat = Number(pair?.[0]);
+            const lon = Number(pair?.[1]);
+            if (!Number.isFinite(lat) || !Number.isFinite(lon)) {
+              return null;
+            }
+            return [lon, lat];
+          })
+          .filter(Boolean);
+
+        if (lineCoords.length < 2) {
+          return;
+        }
+
+        map.addSource("planned-route", {
+          type: "geojson",
+          data: {
+            type: "Feature",
+            geometry: {
+              type: "LineString",
+              coordinates: lineCoords,
+            },
+            properties: {},
+          },
+        });
+
+        map.addLayer({
+          id: "planned-route-glow",
+          type: "line",
+          source: "planned-route",
+          paint: {
+            "line-color": "#6ec5ff",
+            "line-width": 10,
+            "line-opacity": 0.42,
+          },
+        });
+
+        map.addLayer({
+          id: "planned-route-line",
+          type: "line",
+          source: "planned-route",
+          paint: {
+            "line-color": "#1d8fff",
+            "line-width": 5,
+            "line-opacity": 0.95,
+          },
+        });
+
+        const start = payload?.start;
+        if (start && Number.isFinite(Number(start.lat)) && Number.isFinite(Number(start.lon))) {
+          new maplibregl.Marker({ color: "#1d8fff", scale: 1.15 })
+            .setLngLat([Number(start.lon), Number(start.lat)])
+            .setPopup(new maplibregl.Popup({ offset: 12 }).setText("Current/start point"))
+            .addTo(map);
+        }
+
+        const bounds = lineCoords.reduce(
+          (b, coord) => b.extend(coord),
+          new maplibregl.LngLatBounds(lineCoords[0], lineCoords[0]),
+        );
+
+        map.fitBounds(bounds, {
+          padding: { top: 90, bottom: 90, left: 40, right: 40 },
+          maxZoom: 16.2,
+          duration: 900,
+        });
+      });
+    </script>
+  </body>
+</html>
