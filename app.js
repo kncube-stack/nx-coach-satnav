@@ -183,13 +183,13 @@ const state = {
   currentPlan: null,
   settings: { ...DEFAULT_SETTINGS },
   cameraChaseOffsetPx: DEFAULT_CAMERA_CHASE_OFFSET_PX,
+  hazardsPreloadStarted: false,
 };
 
 const el = {
   appShell: document.querySelector(".app-shell"),
   floatingTop: document.querySelector(".floating-top"),
   searchDragHandle: document.getElementById("search-drag-handle"),
-  topMenuBtn: document.getElementById("top-menu-btn"),
   topSettingsBtn: document.getElementById("top-settings-btn"),
   topRoadName: document.getElementById("top-road-name"),
   keyInput: document.getElementById("ors-key"),
@@ -214,13 +214,9 @@ const el = {
   summary: document.getElementById("summary"),
   directions: document.getElementById("directions"),
   dutyTimeline: document.getElementById("duty-timeline"),
-  streetViewCenterBtn: document.getElementById("streetview-center"),
-  streetViewStartBtn: document.getElementById("streetview-start"),
-  startGuidanceBtn: document.getElementById("start-guidance"),
   stopGuidanceBtn: document.getElementById("stop-guidance"),
   navSearchFab: document.getElementById("nav-search-fab"),
   navRecenterFab: document.getElementById("nav-recenter-fab"),
-  gpsFollowCheckbox: document.getElementById("gps-follow"),
   voiceGuidanceToggle: document.getElementById("voice-guidance-toggle"),
   gpsStatus: document.getElementById("gps-status"),
   navStatus: document.getElementById("nav-status"),
@@ -362,9 +358,6 @@ async function init() {
   el.addViaBtn.addEventListener("click", handleAddVia);
   el.viaList.addEventListener("click", handleViaListClick);
   el.planBtn.addEventListener("click", handleStartRoute);
-  if (el.topMenuBtn) {
-    el.topMenuBtn.addEventListener("click", () => setStopsSheetOpen(!state.stopsSheetOpen));
-  }
   if (el.topSettingsBtn) {
     el.topSettingsBtn.addEventListener("click", () => setSettingsSheetOpen(!state.settingsSheetOpen));
   }
@@ -372,15 +365,6 @@ async function init() {
   el.closeStopsBtn.addEventListener("click", () => setStopsSheetOpen(false));
   el.toggleSettingsBtn.addEventListener("click", () => setSettingsSheetOpen(!state.settingsSheetOpen));
   el.closeSettingsBtn.addEventListener("click", () => setSettingsSheetOpen(false));
-  if (el.streetViewCenterBtn) {
-    el.streetViewCenterBtn.addEventListener("click", handleOpenStreetViewAtCenter);
-  }
-  if (el.streetViewStartBtn) {
-    el.streetViewStartBtn.addEventListener("click", handleOpenStreetViewAtStartStop);
-  }
-  if (el.startGuidanceBtn) {
-    el.startGuidanceBtn.addEventListener("click", startLiveGuidance);
-  }
   if (el.stopGuidanceBtn) {
     el.stopGuidanceBtn.addEventListener("click", stopLiveGuidance);
   }
@@ -485,37 +469,7 @@ async function init() {
   setStatus(`Loaded ${state.stops.length} stops and ${state.duties.length} duties.`, "ok");
   warnIfUsingPublicEndpoints();
   registerServiceWorker();
-  preloadHazardDatasets().catch((error) => {
-    const detail = error && error.message ? ` (${error.message})` : "";
-    setStatus(`Hazard datasets could not be loaded. Routing still available.${detail}`, "warn");
-  });
-
-  const firstFew = state.stops.slice(0, 10);
-  const geocodedResults = await Promise.allSettled(firstFew.map((stop) => geocodeStop(stop)));
-  const geocoded = [];
-  geocodedResults.forEach((result, index) => {
-    if (result.status !== "fulfilled") {
-      return;
-    }
-    const point = result.value;
-    const stop = firstFew[index];
-    geocoded.push(point);
-    const marker = L.circleMarker([point.lat, point.lon], {
-      radius: 5,
-      color: "#00539b",
-      fillColor: "#2f78c3",
-      fillOpacity: 0.95,
-      weight: 1,
-    });
-    marker.bindPopup(`${escapeHtml(stop.name)}<br>${escapeHtml(stop.postcode)}`);
-    marker.addTo(state.markerLayer);
-  });
-
-  if (geocoded.length > 1) {
-    map.fitBounds(L.latLngBounds(geocoded.map((p) => [p.lat, p.lon])), {
-      padding: [25, 25],
-    });
-  }
+  scheduleHazardPreload();
 }
 
 function populateStopSelect(select, includePlaceholder = false) {
@@ -1298,6 +1252,32 @@ function setCameraChaseOffsetPx(value, persist = true) {
     // Best effort persistence.
   }
   return state.cameraChaseOffsetPx;
+}
+
+function scheduleHazardPreload() {
+  if (state.hazardsPreloadStarted) {
+    return;
+  }
+  state.hazardsPreloadStarted = true;
+
+  const run = () => {
+    preloadHazardDatasets()
+      .then(() => {
+        if (state.routeGuide) {
+          evaluateRouteHazards();
+        }
+      })
+      .catch((error) => {
+        const detail = error && error.message ? ` (${error.message})` : "";
+        setStatus(`Hazard datasets could not be loaded. Routing still available.${detail}`, "warn");
+      });
+  };
+
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(run, { timeout: 5000 });
+    return;
+  }
+  window.setTimeout(run, 1200);
 }
 
 async function preloadHazardDatasets() {
@@ -3531,9 +3511,6 @@ function updateVoiceGuidanceButton() {
 }
 
 function setGuidanceButtonsRunning(isRunning) {
-  if (el.startGuidanceBtn) {
-    el.startGuidanceBtn.disabled = isRunning;
-  }
   if (el.stopGuidanceBtn) {
     el.stopGuidanceBtn.disabled = !isRunning;
   }
@@ -5191,7 +5168,26 @@ function clearLoadedDuty() {
   renderDutyTimeline();
 }
 
+function isDebugModeEnabled() {
+  try {
+    const fromQuery = new URLSearchParams(window.location.search).get("debug");
+    if (fromQuery === "1" || fromQuery === "true") {
+      return true;
+    }
+    return localStorage.getItem("nx_debug") === "1";
+  } catch {
+    return false;
+  }
+}
+
 function exposeDebugApi() {
+  if (!isDebugModeEnabled()) {
+    if ("nxDebug" in window) {
+      delete window.nxDebug;
+    }
+    return;
+  }
+
   window.nxDebug = {
     startSimulatedGpsFeed,
     stopSimulatedGpsFeed,

@@ -1,4 +1,4 @@
-const CACHE_NAME = "nx-satnav-cache-v20260217i";
+const CACHE_NAME = "nx-satnav-cache-v20260223a";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -10,13 +10,11 @@ const CORE_ASSETS = [
   "./lowbridge-data.geojson",
   "./road-width-data.geojson",
   "./manifest.webmanifest",
-  "./maplibre-preview.html"
+  "./maplibre-preview.html",
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)).catch(() => Promise.resolve()),
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS)));
   self.skipWaiting();
 });
 
@@ -35,18 +33,33 @@ self.addEventListener("fetch", (event) => {
   }
 
   const requestUrl = new URL(event.request.url);
-  const isSameOrigin = requestUrl.origin === self.location.origin;
-  if (!isSameOrigin) {
+  if (requestUrl.origin !== self.location.origin) {
     return;
   }
+
+  const isDocumentRequest = event.request.mode === "navigate";
 
   event.respondWith(
     fetch(event.request)
       .then((response) => {
-        const copy = response.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => Promise.resolve());
+        if (response && response.ok && response.type === "basic") {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)).catch(() => Promise.resolve());
+        }
         return response;
       })
-      .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./index.html"))),
+      .catch(async () => {
+        const cached = await caches.match(event.request);
+        if (cached) {
+          return cached;
+        }
+        if (isDocumentRequest) {
+          const fallback = await caches.match("./index.html");
+          if (fallback) {
+            return fallback;
+          }
+        }
+        throw new Error("Offline and no cached response available");
+      }),
   );
 });
