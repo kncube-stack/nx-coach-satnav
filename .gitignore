@@ -8,3 +8,5 @@ node_modules/
 *.swo
 nx-satnav-deploy.zip
 deploy-package/
+.vercel
+.env*.local
